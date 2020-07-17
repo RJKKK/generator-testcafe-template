@@ -1,0 +1,75 @@
+{
+  "startTime": "2020-07-17T03:50:45.562Z",
+  "endTime": "2020-07-17T03:51:03.659Z",
+  "userAgents": [
+    "Chrome 83.0.4103.116 / Windows 10"
+  ],
+  "passed": 1,
+  "total": 2,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "注册",
+      "path": "E:\\www\\testcafe-template\\test_modules\\default\\index.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "注册",
+          "meta": {},
+          "errs": [
+            "The specified selector does not match any element in the DOM tree.\n\n > | Selector('.getCode')\n\nBrowser: Chrome 83.0.4103.116 / Windows 10\nScreenshot: E:\\www\\testcafe-template\\error\\2020-07-17_11-50-45\\test-1\\Chrome_83.0.4103.116_Windows_10\\errors\\1.png\n\n   24 |    },\n   25 |    // 获取验证码\n   26 |    {\n   27 |        desc: '点击获取验证码按钮',\n   28 |        action: async page => {\n > 29 |            await page.click('.getCode')\n   30 |        }\n   31 |    },\n   32 |\n   33 |]\n   34 |export default listAction\n\n   at Object.<anonymous> (E:\\www\\testcafe-template\\test_modules\\default\\cases.js:29:24)\n   at Object.action (E:\\www\\testcafe-template\\test_modules\\default\\cases.js:28:9)\n   at <anonymous> (E:\\www\\testcafe-template\\test_modules\\default\\index.js:10:29)"
+          ],
+          "durationMs": 18048,
+          "screenshotPath": "E:\\www\\testcafe-template\\error\\2020-07-17_11-50-45\\test-1\\Chrome_83.0.4103.116_Windows_10\\errors\\1.png",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "登录",
+      "path": "E:\\www\\testcafe-template\\test_modules\\login\\index.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "登录",
+          "meta": {},
+          "errs": [],
+          "durationMs": 16050,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": [],
+  "testDetails": {
+    "注册": [
+      {
+        "desc": "进入注册页",
+        "isPass": true
+      },
+      {
+        "desc": "输入账号",
+        "isPass": true
+      },
+      {
+        "desc": "点击获取验证码按钮",
+        "isPass": false
+      }
+    ],
+    "登录": [
+      {
+        "desc": "输入用户名",
+        "isPass": true
+      },
+      {
+        "desc": "输入密码",
+        "isPass": true
+      },
+      {
+        "desc": "登录点击",
+        "isPass": true
+      }
+    ]
+  }
+}

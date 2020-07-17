@@ -1,0 +1,19 @@
+{
+  "name": "testcafe-template",
+  "version": "0.1.0",
+  "description": "ui测试模板",
+  "main": "app.js",
+  "author": "kun",
+  "license": "MIT",
+  "scripts": {
+    "add": "node cmds/addModule.js",
+    "del": "node cmds/delModule.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.1",
+    "open": "^7.0.4",
+    "prompts": "^2.3.2",
+    "testcafe": "^1.8.8"
+  }
+}
