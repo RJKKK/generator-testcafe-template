@@ -1,13 +1,9 @@
 {
   "name": "generator-testcafe-template",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "to build a ui-test project by using testcafe",
-  "homepage": "",
-  "author": {
-    "name": "RJKKK",
-    "email": "shengunkun@gmail.com",
-    "url": ""
-  },
+  "homepage": "https://github.com/RJKKK/generator-testcafe-template#readme",
+  "author": "RJKKK <shengunkun@gmail.com>",
   "files": [
     "generators"
   ],
@@ -75,6 +71,12 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "https://github.com/RJKKK/generator-testcafe-template",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RJKKK/generator-testcafe-template.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RJKKK/generator-testcafe-template/issues"
+  }
 }

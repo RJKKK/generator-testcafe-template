@@ -2,8 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const root = path.join(__dirname,'../test_modules')
 const prompts = require('prompts');
-let appConfig = require('../config')
-const iconv = require('iconv-lite');
+let appConfig = require('../globalConfig')
 String.prototype.splice = function (start,newStr) {
     return this.slice(0,start)+newStr+this.slice(start)
 }
@@ -90,7 +89,7 @@ async function createModule() {
 
     !~appConfig.test_modules.indexOf(`./test_modules/${moduleName}/index.js`)&&appConfig.test_modules.push(`./test_modules/${moduleName}/index.js`)
     let reg = /("test_modules":[\d\D]*])/
-    let fileContent =  fs.readFileSync(path.join(__dirname,'../config.js'),{encoding:'utf8'})
+    let fileContent =  fs.readFileSync(path.join(__dirname,'../globalConfig.js'),{encoding:'utf8'})
     let head =  '"test_modules": [\r\n'
     let rear =  '  ]'
     let content = ''
@@ -99,7 +98,7 @@ async function createModule() {
     })
     let newfile = fileContent.replace(reg,head+content+rear)
 
-  fs.writeFileSync(path.join(__dirname,'../config.js'),newfile)
+  fs.writeFileSync(path.join(__dirname,'../globalConfig.js'),newfile)
 
 }
 function sleep(ms) {

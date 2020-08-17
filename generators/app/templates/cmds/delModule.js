@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 const root = path.join(__dirname,'../test_modules')
-let appConfig = require('../config')
+let appConfig = require('../globalConfig')
 if(!process.argv[2]){
     throw new Error('Can not find the name for a  module from cmd text!')
 }
@@ -36,7 +36,7 @@ function _delDir(path){
 }
 function _delFileLog() {
     let reg = /("test_modules":[\d\D]*])/
-    let fileContent =  fs.readFileSync(path.join(__dirname,'../config.js'),{encoding:'utf8'})
+    let fileContent =  fs.readFileSync(path.join(__dirname,'../globalConfig.js'),{encoding:'utf8'})
     let head =  '"test_modules": [\r\n'
     let rear =  '  ]'
     let content = ''
@@ -50,5 +50,5 @@ function _delFileLog() {
         content+= `    "${val}",\r\n`
     })
     let newfile = fileContent.replace(reg,head+content+rear)
-    fs.writeFileSync(path.join(__dirname,'../config.js'),newfile)
+    fs.writeFileSync(path.join(__dirname,'../globalConfig.js'),newfile)
 }
